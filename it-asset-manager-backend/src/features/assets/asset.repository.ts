@@ -8,7 +8,7 @@ export const create = async (data: AssetBody) => {
             serialNumber: data.serialNumber,
             name: data.name,
             purchaseDate: data.purchaseDate,
-            status: data.status // Se vier vazio, o Prisma usa o padrão 'Em Estoque' definido no Schema
+            status: data.status
         }
     });
 };
@@ -16,14 +16,14 @@ export const create = async (data: AssetBody) => {
 // READ ALL
 export const findAll = async () => {
     return await prisma.asset.findMany({
-        orderBy: { createdAt: 'desc' } // Ordenação simples e legível
+        orderBy: { createdAt: 'desc' } 
     });
 };
 
 // READ ONE
 export const findById = async (id: string) => {
     return await prisma.asset.findUnique({
-        where: { id: Number(id) } // Convertendo String para Int, pois o banco espera número
+        where: { id: Number(id) }
     });
 };
 
@@ -40,8 +40,7 @@ export const update = async (id: string, data: AssetBody) => {
             }
         });
     } catch (error) {
-        // Se o Prisma não achar o ID, ele joga um erro.
-        // Capturamos aqui e retornamos null para o Controller tratar como 404.
+
         return null;
     }
 };
