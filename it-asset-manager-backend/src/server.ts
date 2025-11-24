@@ -11,7 +11,6 @@ app.use(cors());
 
 async function startServer() {
     try {
-        // Removi o initializeDatabase() daqui, pois o Prisma faz isso automático.
         
         app.use('/assets', assetRoutes);
 
