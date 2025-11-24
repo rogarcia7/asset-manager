@@ -8,7 +8,7 @@ export interface Asset {
   updatedAt?: string;
 }
 
-// Tipo para criar/editar (sem ID)
+
 export interface AssetPayload {
   serialNumber: string;
   name: string;
