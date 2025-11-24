@@ -1,14 +1,11 @@
-/* --- Variáveis e Reset --- */
 :root {
   --bg-dark: #0f172a;
   --bg-card: #1e293b;
-  --primary: #3b82f6; /* Azul Neon */
+  --primary: #3b82f6; 
   --primary-hover: #2563eb;
   --text-main: #f1f5f9;
   --text-muted: #94a3b8;
   --border: #334155;
-  
-  /* Cores de Status */
   --green: #10b981;
   --green-bg: rgba(16, 185, 129, 0.2);
   --yellow: #f59e0b;
@@ -27,7 +24,6 @@ body {
   color: var(--text-main);
   margin: 0;
   min-height: 100vh;
-  /* Fundo sutil de grade para dar cara tech */
   background-image: radial-gradient(#334155 1px, transparent 1px);
   background-size: 40px 40px;
 }
@@ -44,7 +40,6 @@ body {
   margin: 0 auto;
 }
 
-/* --- Header --- */
 .app-header {
   margin-bottom: 30px;
 }
@@ -80,7 +75,6 @@ h1 {
   color: var(--text-muted);
 }
 
-/* --- Cartão Principal --- */
 .content-card {
   background-color: var(--bg-card);
   border-radius: 16px;
@@ -89,7 +83,6 @@ h1 {
   overflow: hidden;
 }
 
-/* --- Tabela --- */
 .table-responsive {
   overflow-x: auto;
 }
@@ -123,8 +116,6 @@ h1 {
 .id-col { color: var(--text-muted); font-size: 0.9rem; }
 .mono-font { font-family: 'Courier New', monospace; letter-spacing: -0.5px; color: var(--text-main); }
 .fw-bold { font-weight: 600; }
-
-/* --- Status Badges --- */
 .status-badge {
   padding: 6px 12px;
   border-radius: 20px;
@@ -138,7 +129,7 @@ h1 {
 .status-maintenance { background: var(--yellow-bg); color: var(--yellow); border: 1px solid rgba(245, 158, 11, 0.3); }
 .status-decommissioned { background: var(--red-bg); color: var(--red); border: 1px solid rgba(239, 68, 68, 0.3); }
 
-/* --- Botões --- */
+
 button { cursor: pointer; border: none; transition: all 0.2s; font-family: inherit; }
 
 .btn-primary {
@@ -165,7 +156,6 @@ button { cursor: pointer; border: none; transition: all 0.2s; font-family: inher
 .icon-btn.delete:hover { background-color: var(--red-bg); color: var(--red); }
 .actions-cell { display: flex; justify-content: flex-end; gap: 5px; }
 
-/* --- Modal --- */
 .modal-overlay {
   position: fixed; top: 0; left: 0; right: 0; bottom: 0;
   background: rgba(0,0,0,0.7);
@@ -220,7 +210,6 @@ button { cursor: pointer; border: none; transition: all 0.2s; font-family: inher
 .btn-secondary { background: transparent; color: var(--text-muted); padding: 10px 20px; border: 1px solid var(--border); border-radius: 8px; }
 .btn-secondary:hover { background: rgba(255,255,255,0.05); color: white; }
 
-/* --- Utilitários e Animações --- */
 .alert.error {
   background: var(--red-bg); color: var(--red); border: 1px solid var(--red);
   padding: 12px; border-radius: 8px; margin-bottom: 20px; display: flex; gap: 10px; align-items: center;
