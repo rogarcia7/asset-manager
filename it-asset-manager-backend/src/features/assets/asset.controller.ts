@@ -35,7 +35,6 @@ export const list = async (_req: Request, res: Response) => {
 // GET /assets/:id
 export const getOne = async (req: Request, res: Response) => {
     try {
-        // MUDANÇA AQUI: Forçando 'as string'
         const id = req.params.id as string;
         const asset = await assetRepo.findById(id);
 
@@ -51,7 +50,6 @@ export const getOne = async (req: Request, res: Response) => {
 // PUT /assets/:id
 export const update = async (req: Request, res: Response) => {
     try {
-        // MUDANÇA AQUI: Forçando 'as string'
         const id = req.params.id as string;
         const updatedAsset = await assetRepo.update(id, req.body as AssetBody);
 
@@ -71,7 +69,6 @@ export const update = async (req: Request, res: Response) => {
 // DELETE /assets/:id
 export const remove = async (req: Request, res: Response) => {
     try {
-        // MUDANÇA AQUI: Forçando 'as string'
         const id = req.params.id as string;
         const success = await assetRepo.remove(id);
 
