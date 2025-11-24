@@ -6,7 +6,7 @@ interface AssetTableProps {
   onDelete: (id: number) => void;
 }
 
-// Função auxiliar para escolher a cor do status
+
 const getStatusClass = (status: string) => {
   switch (status) {
     case 'Em Estoque': return 'status-stock';
