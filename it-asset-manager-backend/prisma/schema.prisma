@@ -1,0 +1,21 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url = env("DATABASE_URL")
+}
+
+model Asset {
+  id           Int      @id @default(autoincrement())
+  serialNumber String   @unique
+  name         String
+  purchaseDate String?  // A interrogação indica que é opcional
+  status       String   @default("Em Estoque")
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt // O Prisma atualiza esse campo sozinho!
+
+  // Mapeia para o nome da tabela que já usávamos
+  @@map("assets")
+}

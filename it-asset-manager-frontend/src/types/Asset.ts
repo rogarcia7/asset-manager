@@ -1,6 +1,4 @@
-// src/types/Asset.ts
 
-// A interface Asset precisa ser igual à do backend para garantir a tipagem correta
 export interface Asset {
     id: number;
     serialNumber: string;
