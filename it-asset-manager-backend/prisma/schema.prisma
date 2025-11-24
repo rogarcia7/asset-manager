@@ -11,11 +11,11 @@ model Asset {
   id           Int      @id @default(autoincrement())
   serialNumber String   @unique
   name         String
-  purchaseDate String?  // A interrogação indica que é opcional
+  purchaseDate String?  
   status       String   @default("Em Estoque")
   createdAt    DateTime @default(now())
-  updatedAt    DateTime @updatedAt // O Prisma atualiza esse campo sozinho!
+  updatedAt    DateTime @updatedAt 
 
-  // Mapeia para o nome da tabela que já usávamos
+
   @@map("assets")
 }
